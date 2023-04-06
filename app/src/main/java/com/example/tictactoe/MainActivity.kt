@@ -3,6 +3,7 @@ package com.example.tictactoe
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         supportActionBar?.hide()
 
         player1=findViewById(R.id.f)
@@ -39,13 +41,13 @@ class MainActivity : AppCompatActivity() {
         val name1=intent.getStringExtra("player1")
         val name2=intent.getStringExtra("player2")
 
-        val checker= intent.getStringExtra("x")
+        val checker= intent.getStringExtra("currentState")
 
         if (checker=="x") {
             player1.text = name2
             player2.text = name1
         }
-        else
+        else if (checker=="o")
         {
             player1.text = name1
             player2.text = name2
@@ -94,9 +96,9 @@ class MainActivity : AppCompatActivity() {
 
             if (moves[v1] == moves[v2] && moves[v2] == moves[v3] && moves[v1] != -1)
             {
-                isWinner = v1
+                isWinner = moves[v1]
                 // Break out of the loop when condition is met
-                Toast.makeText(this,"$isWinner+ team win the game",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"$isWinner's team win the game",Toast.LENGTH_SHORT).show()
                 ShowCustomAlertDialog(this)
                 winn = true
                 return@forEachIndexed
@@ -144,7 +146,7 @@ class MainActivity : AppCompatActivity() {
         if(isWinner==0) {
             winner.text =player1.text
         }
-        else
+        else if (isWinner==1)
         {
 
             winner.text =player2.text

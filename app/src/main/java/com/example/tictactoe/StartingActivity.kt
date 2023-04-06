@@ -1,6 +1,7 @@
 package com.example.tictactoe
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.renderscript.ScriptGroup.Binding
@@ -21,6 +22,7 @@ class StartingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityStartingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         val first =findViewById<TextInputEditText>(R.id.first)
         val second =findViewById<TextInputEditText>(R.id.second)
 
