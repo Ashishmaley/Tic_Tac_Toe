@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/img"
+    android:orientation="horizontal"
+    tools:context=".StartingActivity">
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="3dp"
+                app:cardBackgroundColor="#E4080F30"
+                app:cardCornerRadius="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   android:padding="20dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:helperTextEnabled="true"
+                    app:helperText="Enter first player name"
+                    app:helperTextTextColor="#ADDDE0"
+                    android:textColorHint="#ADDDE0"
+                    app:startIconDrawable="@drawable/baseline_person_outline_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/first"
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColorHint="#ADDDE0"
+                        android:textStyle="bold"
+                        android:background="@drawable/gradient1"
+                        android:hint="First Player"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    app:helperText="Enter second player name"
+                    app:helperTextTextColor="#ADDDE0"
+                    android:textColorHint="#ADDDE0"
+                    app:startIconDrawable="@drawable/baseline_person_outline_24">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/second"
+                        android:layout_width="225dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:background="@drawable/gradient1"
+                        android:hint="Second Player"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="15dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="#D0EEF3F5"
+                android:layout_height="wrap_content">
+            <RadioGroup
+                android:layout_width="170dp"
+                android:id="@+id/radioo"
+                android:background="@drawable/gradient1"
+                android:layout_gravity="center"
+                android:layout_height="65dp">
+                <RadioButton
+                    android:layout_width="150dp"
+                    android:id="@+id/firstplayer"
+                    android:layout_height="0dp"
+                    android:textColor="#ADDDE0"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:textSize="10sp"
+                    android:text="0 for first player " />
+                <RadioButton
+                    android:layout_width="150dp"
+                    android:layout_gravity="center"
+                    android:layout_height="0dp"
+                    android:id="@+id/secondplayer"
+                    android:textColor="#ADDDE0"
+                    android:layout_margin="5dp"
+                    android:textSize="10sp"
+                    android:layout_weight="1"
+                     android:text="0 for second player " />
+
+            </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+            android:id="@+id/button"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+            android:textColorHint="@color/black"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#A2F8F9F9"
+        android:layout_height="wrap_content"
+        style="@style/gredu"
+        android:hint="Start"/>
+
+    </LinearLayout>
+
+</LinearLayout>

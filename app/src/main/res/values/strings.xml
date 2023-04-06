@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="check_one_of_Two">Check on of two</string>
+</resources>
