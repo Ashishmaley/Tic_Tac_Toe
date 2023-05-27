@@ -55,14 +55,15 @@ class StartingActivity : AppCompatActivity() {
                     putExtra(Names.player2, secondT)
                     putExtra(Names.currentState,startsymbo)
                 })
+                finish()
             }
             if(first.text?.isEmpty() == true){
-                first.error= "Please fill both entity"
+                first.error= "Please fill this entity"
             }
             if(second.text?.isEmpty() == true){
-                second.error= "Please fill both entity"
+                second.error= "Please fill this entity"
             }
-            if(startsymbo?.isEmpty()==true)
+            if(startsymbo?.isEmpty() ==true)
             {
                Toast.makeText(this,getString(R.string.check_one_of_Two),Toast.LENGTH_SHORT).show()
             }

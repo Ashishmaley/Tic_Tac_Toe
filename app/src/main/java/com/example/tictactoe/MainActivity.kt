@@ -98,8 +98,7 @@ class MainActivity : AppCompatActivity() {
             {
                 isWinner = moves[v1]
                 // Break out of the loop when condition is met
-                Toast.makeText(this,"$isWinner's team win the game",Toast.LENGTH_SHORT).show()
-                ShowCustomAlertDialog(this)
+                showCustomAlertDialog(this)
                 winn = true
                 return@forEachIndexed
             }
@@ -133,7 +132,7 @@ class MainActivity : AppCompatActivity() {
 
 
     // Custom Alert Dialog
-    fun ShowCustomAlertDialog(context: Context) {
+    private fun showCustomAlertDialog(context: Context) {
         val alertDialog = AlertDialog.Builder(context)
         val inflater = LayoutInflater.from(context)
         val dialogView = inflater.inflate(R.layout.winner, null)
